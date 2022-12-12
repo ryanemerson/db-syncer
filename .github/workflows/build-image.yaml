@@ -11,6 +11,9 @@ jobs:
   upload:
     runs-on: ubuntu-latest
 
+    outputs:
+      image-name: db-syncer
+
     steps:
       - uses: actions/checkout@v2
         with:
