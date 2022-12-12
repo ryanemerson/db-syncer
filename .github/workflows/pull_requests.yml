@@ -32,10 +32,11 @@ jobs:
           path: "**/target/*-reports*/**/TEST-*.xml"
 
   image:
-    uses: ryanemerson/db-syncer/.github/workflows/build-image.yaml@gh_action_image_build
+#    uses: ryanemerson/gingersnap-test/.github/workflows/e2e.yaml@main
+    uses: ./.github/workflows/build-image.yaml
 
   use-image:
-    needs: call-reusable-workflow
+    needs: image
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact

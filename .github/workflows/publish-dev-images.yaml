@@ -7,7 +7,7 @@ on:
 
 jobs:
   image:
-    uses: ryanemerson/db-syncer/.github/workflows/build-image.yaml@gh_action_image_build
+    uses: ./.github/workflows/build-image.yaml
 
   upload:
     needs: image
@@ -31,5 +31,5 @@ jobs:
       - name: Load and Push image
         # Use same tag value as passed to image job
         run: |
-        docker load --input /tmp/db-syncer.tar
-        docker push quay.io/gingersnap/db-syncer:latest
+          docker load --input /tmp/db-syncer.tar
+          docker push quay.io/gingersnap/db-syncer:latest
