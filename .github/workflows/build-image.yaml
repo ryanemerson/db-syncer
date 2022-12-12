@@ -6,13 +6,14 @@ on:
       git-ref:
         type: string
         default: ${{ github.ref }}
+    outputs:
+      image-name:
+        description: The name of the created image file
+        value: db-syncer
 
 jobs:
   upload:
     runs-on: ubuntu-latest
-
-    outputs:
-      image-name: db-syncer
 
     steps:
       - uses: actions/checkout@v2
@@ -44,4 +45,3 @@ jobs:
         with:
           name: db-syncer
           path: /tmp/db-syncer.tar
-
