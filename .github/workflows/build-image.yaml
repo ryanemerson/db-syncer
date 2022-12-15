@@ -12,7 +12,7 @@ on:
         value: db-syncer
 
 jobs:
-  upload:
+  build-db-syncer:
     runs-on: ubuntu-latest
 
     steps:
