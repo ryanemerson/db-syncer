@@ -32,4 +32,4 @@ jobs:
 #          path: "**/target/*-reports*/**/TEST-*.xml"
 
   e2e:
-    uses: ryanemerson/gingersnap-test/.github/workflows/e2e.yaml@main
+    uses: ryanemerson/gingersnap-test/.github/workflows/e2e.yaml@test_dev
